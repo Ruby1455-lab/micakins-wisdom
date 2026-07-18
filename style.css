@@ -1,0 +1,467 @@
+/* --- New Contact Form & WhatsApp Features --- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap');
+
+/* Footer Flexbox Adjustment */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 40px;
+}
+
+.footer-info, .footer-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.sub-logo {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.contact-details p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.contact-details i {
+    color: #d4af37;
+    margin-right: 10px;
+    width: 15px;
+}
+
+.contact-details ul {
+    list-style: none;
+    padding-left: 25px;
+}
+
+.contact-details ul li {
+    margin-bottom: 5px;
+}
+
+/* Contact Form Styling */
+.footer-form h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #d4af37;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #242f3e;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 4px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #d4af37;
+}
+
+.form-group input::placeholder, .form-group textarea::placeholder {
+    color: #888;
+}
+
+.submit-btn {
+    background-color: #d4af37;
+    color: #1a222d;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #20ba5a;
+    color: #fff;
+}
+
+/* Adjust layout on mobile devices */
+@media(max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 28px;
+    }
+}
+
+
+/* Hero Section - Premium Dark Gradient matching the flyer */
+.hero {
+    position: relative;
+    height: 85vh;
+    /* This gradient replicates the rich dark slate tones of the flyer sky */
+    background: linear-gradient(180deg, #2b333f 0%, #1e242d 100%); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 2px solid rgba(212, 175, 55, 0.1); /* Subtle gold border at the bottom edge */
+}
+
+.hero-overlay {
+    display: none; /* No overlay image needed anymore */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    color: #ffffff; /* Crisp white for the main name */
+}
+
+.hero-content h1 span {
+    color: #d4af37; /* The exact warm metallic gold from the flyer text */
+    font-size: 2.2rem;
+    display: block;
+    margin-top: 5px;
+}
+
+.hero-content .tagline {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    color: #b5c2c9; /* Soft muted silver-blue tone for readability */
+}
+
+
+/* ==========================================
+   HERO SECTION (Matches the Dark Premium Sky)
+   ========================================== */
+.hero {
+    position: relative;
+    height: 85vh;
+    /* Smooth gradient that mimics the flyer's backdrop */
+    background: linear-gradient(135deg, #2c3540 0%, #1e242c 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #ffffff; /* Crisp white */
+}
+
+.hero-content h1 span {
+    color: #caad82; /* Warm flyer gold */
+}
+
+.hero-content .tagline {
+    color: #a8b4c2; /* Muted slate for subtitle */
+}
+
+
+/* ==========================================
+   SERVICES SECTION (Matches the Premium Cream Right Column)
+   ========================================== */
+#services {
+    background-color: #eeeae1; /* The luxury light cream background */
+    padding: 60px 20px;
+    color: #1e242c; /* Dark text for perfect readability */
+}
+
+#services h2 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #1e242c;
+    border-bottom: 2px solid #caad82; /* Gold accent line under heading */
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Service Cards/Items */
+.service-item {
+    background: #ffffff; /* White cards to pop off the cream background */
+    border-left: 4px solid #caad82; /* Gold strip on the side */
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+
+/* ==========================================
+   CONTACT / FOOTER (Matches the Lower Dark Grid)
+   ========================================== */
+footer, .contact-section {
+    background-color: #1e242c; /* Solid deep dark slate */
+    color: #ffffff;
+    padding: 40px 20px;
+    border-top: 3px solid #caad82; /* Elegant gold divider top border */
+}
+
+.contact-info i {
+    color: #caad82; /* Gold color for phone/email icons */
+}
+
+/* ==========================================
+   REVIEWS SECTION (Premium Layout)
+   ========================================== */
+#reviews {
+    background-color: #eeeae1; /* Luxury light cream from the flyer */
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#reviews h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    color: #1e242c; /* Deep dark slate text */
+    margin-bottom: 5px;
+}
+
+.reviews-subtitle {
+    font-size: 1rem;
+    color: #caad82; /* Flyer gold accent text */
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.reviews-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Ensures it looks great on mobile phones */
+}
+
+.review-card {
+    background-color: #ffffff; /* Clean white cards to contrast the cream */
+    border-top: 4px solid #caad82; /* Gold accent bar at the top */
+    padding: 30px;
+    border-radius: 4px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 500px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    position: relative;
+}
+
+.quote-icon i {
+    color: rgba(202, 173, 130, 0.3); /* Subtle transparent gold quote icon */
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.review-text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #4a535e;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.client-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.client-name {
+    font-weight: 600;
+    color: #1e242c;
+    font-size: 1.1rem;
+}
+
+.client-location {
+    font-size: 0.9rem;
+    color: #caad82; /* Gold text for location */
+    font-weight: 500;
+    margin-top: 2px;
+}
+/* ==========================================
+   MAIN HEADING TYPOGRAPHY (Flyer Style)
+   ========================================== */
+.hero-content h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.8rem;       /* Bold, prominent size */
+    font-weight: 400;         /* Clean, elegant weight matching the flyer */
+    text-transform: uppercase;/* Forces all letters to be capital */
+    letter-spacing: 4px;      /* Adds breathing room between letters */
+    line-height: 1.1;
+    color: #ffffff;           /* Crisp white for the primary name */
+    margin-bottom: 20px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3); /* Subtle shadow for sharp readability against the dark sky */
+}
+
+/* For the "REAL ESTATE VENTURES" part */
+.hero-content h1 .sub-brand {
+    display: block;           /* Pushes it to a brand new line underneath */
+    font-size: 2.4rem;        /* Slightly smaller to create hierarchy */
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #caad82;           /* The exact soft luxury gold from the flyer text */
+    margin-top: 8px;          /* Adds a perfect gap between the two lines */
+}
+
+
+/* Styling for the uploaded Flyer image */
+.flyer-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #eeeae1; /* Blends nicely with the light cream tone */
+}
+
+.business-flyer {
+    max-width: 100%;
+    height: auto;
+    width: 450px; /* Adjust this width to make it bigger or smaller on screen */
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Gives it a premium floating drop shadow */
+}
+
+/* ==========================================
+   MAIN FOOTER STYLING (Premium Dark Slate)
+   ========================================== */
+.main-footer {
+    background-color: #1a222d; /* Deep dark navy slate from the flyer */
+    color: #eeeae1;            /* Luxury light cream text color */
+    padding: 60px 20px 20px 20px;
+    font-family: 'Cormorant Garamond', serif;
+    border-top: 2px solid #caad82; /* Thin gold line separating the page and footer */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-brand {
+    flex: 2;
+    min-width: 280px;
+}
+
+.footer-brand h3 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    letter-spacing: 2px;
+    margin: 0 0 5px 0;
+}
+
+.footer-tagline {
+    font-size: 0.9rem;
+    color: #caad82; /* Metallic Gold branding */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 15px 0;
+}
+
+.footer-desc {
+    font-family: sans-serif; /* Clean readable font for descriptions */
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #b0b5bc; /* Softer gray text for readability */
+    max-width: 450px;
+}
+
+.footer-links {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-links h4 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin: 0 0 20px 0;
+    letter-spacing: 1px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    font-family: sans-serif;
+    color: #eeeae1;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+/* Gold hover effect for the menu links */
+.footer-links a:hover {
+    color: #caad82;
+}
+
+/* Copyright line at the very bottom */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(238, 234, 225, 0.1);
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-family: sans-serif;
+    font-size: 0.85rem;
+    color: #8a929c;
+    margin: 0;
+}
