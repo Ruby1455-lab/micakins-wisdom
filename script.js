@@ -1,303 +1,315 @@
-/* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+(function () {
+  'use strict';
 
-html {
-    scroll-behavior: smooth;
-}
+  var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
-}
+  /* ---------------------------------------------------------
+     Theme toggle
+  --------------------------------------------------------- */
+  var themeToggle = document.getElementById('theme-toggle');
+  var htmlEl = document.documentElement;
 
-/* Header & Navigation */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 8%;
-    background-color: #1a222d; /* Premium Dark Navy Slate */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+  function setThemeButtonState() {
+    var isDark = htmlEl.getAttribute('data-theme') === 'dark';
+    themeToggle.setAttribute('aria-pressed', String(isDark));
+    themeToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+  }
 
-header .logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #d4af37; /* Metallic Gold Accent */
-    letter-spacing: 1px;
-}
+  setThemeButtonState();
 
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-left: 25px;
-    font-size: 0.9rem;
-    font-weight: 400;
-    transition: color 0.3s;
-}
+  themeToggle.addEventListener('click', function () {
+    var current = htmlEl.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    var next = current === 'dark' ? 'light' : 'dark';
+    htmlEl.setAttribute('data-theme', next);
+    localStorage.setItem('mw-theme', next);
+    setThemeButtonState();
+  });
 
-nav a:hover {
-    color: #d4af37;
-}
+  /* ---------------------------------------------------------
+     Sticky header scroll state
+  --------------------------------------------------------- */
+  var header = document.getElementById('site-header');
 
-nav .btn-contact {
-    background-color: #d4af37;
-    color: #1a222d;
-    padding: 8px 18px;
-    border-radius: 4px;
-    font-weight: 600;
-}
-
-nav .btn-contact:hover {
-    background-color: #ffffff;
-    color: #1a222d;
-}
-
-/* Hero Section */
-.hero {
-    position: relative;
-    height: 85vh;
-    background: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(26, 34, 45, 0.75); /* Dark tint overlay */
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-    color: #ffffff;
-    padding: 0 20px;
-}
-
-.hero-content h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3.5rem;
-    line-height: 1.2;
-    margin-bottom: 15px;
-    letter-spacing: 2px;
-}
-
-.hero-content h1 span {
-    color: #d4af37;
-    font-size: 2.2rem;
-    display: block;
-    margin-top: 5px;
-}
-
-.hero-content .tagline {
-    font-size: 1.2rem;
-    font-weight: 300;
-    margin-bottom: 30px;
-    letter-spacing: 1px;
-}
-
-.cta-btn {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: #d4af37;
-    color: #1a222d;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 4px;
-    transition: transform 0.3s, background-color 0.3s;
-}
-
-.cta-btn:hover {
-    transform: translateY(-3px);
-    background-color: #fff;
-}
-
-/* Services Section */
-.services-section {
-    padding: 80px 8%;
-    text-align: center;
-    background-color: #ffffff;
-}
-
-.services-section h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #1a222d;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.service-card {
-    background-color: #fdfdfd;
-    padding: 35px 25px;
-    border: 1px solid #eee;
-    border-radius: 6px;
-    transition: box-shadow 0.3s, transform 0.3s;
-}
-
-.service-card:hover {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    transform: translateY(-5px);
-    border-top: 4px solid #d4af37;
-}
-
-.service-card h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
-    color: #1a222d;
-    margin-bottom: 15px;
-}
-
-.service-card p {
-    font-size: 0.9rem;
-    color: #666;
-}
-
-/* Showcase Gallery Section */
-.gallery-section {
-    padding: 80px 8%;
-    background-color: #f4f5f7;
-}
-
-.gallery-section h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 40px;
-    color: #1a222d;
-}
-
-.gallery-container {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 20px;
-}
-
-.main-image img, .side-images img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 4px;
-}
-
-.main-image {
-    height: 500px;
-}
-
-.side-images {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 153px);
-    gap: 20px;
-}
-
-/* Footer Section */
-footer {
-    background-color: #1a222d;
-    color: #fff;
-    padding: 60px 8% 20px 8%;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 40px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    padding-bottom: 40px;
-}
-
-.footer-info h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
-    color: #d4af37;
-}
-
-.footer-info p {
-    font-size: 0.9rem;
-    color: #aaa;
-}
-
-.footer-contact h4 {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    color: #d4af37;
-}
-
-.footer-contact p, .footer-contact ul {
-    font-size: 0.9rem;
-    color: #ccc;
-    margin-bottom: 10px;
-}
-
-.footer-contact ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.footer-contact a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.footer-contact a:hover {
-    color: #d4af37;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 20px;
-    font-size: 0.8rem;
-    color: #777;
-}
-
-/* Responsive Adjustments */
-@media(max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
+  function updateHeaderState() {
+    if (window.scrollY > 80) {
+      header.classList.add('is-scrolled');
+    } else {
+      header.classList.remove('is-scrolled');
     }
-    nav a {
-        margin: 0 10px;
+  }
+
+  updateHeaderState();
+  window.addEventListener('scroll', updateHeaderState, { passive: true });
+
+  /* ---------------------------------------------------------
+     Mobile drawer
+  --------------------------------------------------------- */
+  var navToggle = document.getElementById('nav-toggle');
+  var mobileDrawer = document.getElementById('mobile-drawer');
+
+  function closeDrawer() {
+    mobileDrawer.classList.remove('is-open');
+    mobileDrawer.setAttribute('aria-hidden', 'true');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-label', 'Open menu');
+    document.body.style.overflow = '';
+  }
+
+  function openDrawer() {
+    mobileDrawer.classList.add('is-open');
+    mobileDrawer.setAttribute('aria-hidden', 'false');
+    navToggle.setAttribute('aria-expanded', 'true');
+    navToggle.setAttribute('aria-label', 'Close menu');
+    document.body.style.overflow = 'hidden';
+  }
+
+  navToggle.addEventListener('click', function () {
+    if (mobileDrawer.classList.contains('is-open')) {
+      closeDrawer();
+    } else {
+      openDrawer();
     }
-    .hero-content h1 {
-        font-size: 2.3rem;
+  });
+
+  mobileDrawer.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', closeDrawer);
+  });
+
+  /* ---------------------------------------------------------
+     "Book a Consultation" / "View Details" -> scroll + focus form
+  --------------------------------------------------------- */
+  document.querySelectorAll('[data-focus-form="true"]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      window.setTimeout(function () {
+        var nameField = document.getElementById('cf-name');
+        if (nameField) nameField.focus({ preventScroll: true });
+      }, 400);
+    });
+  });
+
+  /* ---------------------------------------------------------
+     Properties filter bar
+  --------------------------------------------------------- */
+  var filterButtons = document.querySelectorAll('.filter-btn');
+  var propertyCards = document.querySelectorAll('.property-card');
+  var filterEmpty = document.getElementById('filter-empty');
+
+  filterButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      filterButtons.forEach(function (b) { b.classList.remove('is-active'); });
+      btn.classList.add('is-active');
+
+      var filter = btn.getAttribute('data-filter');
+      var visibleCount = 0;
+
+      propertyCards.forEach(function (card) {
+        var categories = (card.getAttribute('data-category') || '').split(' ');
+        var matches = filter === 'all' || categories.indexOf(filter) !== -1;
+        card.classList.toggle('hidden', !matches);
+        if (matches) visibleCount++;
+      });
+
+      if (filterEmpty) filterEmpty.hidden = visibleCount !== 0;
+    });
+  });
+
+  /* ---------------------------------------------------------
+     About stats count-up on scroll
+  --------------------------------------------------------- */
+  var statNumbers = document.querySelectorAll('.stat-number');
+
+  function animateCount(el) {
+    var target = parseInt(el.getAttribute('data-count'), 10) || 0;
+    var suffix = el.getAttribute('data-suffix') || '';
+
+    if (prefersReducedMotion) {
+      el.textContent = target + suffix;
+      return;
     }
-    .hero-content h1 span {
-        font-size: 1.6rem;
+
+    var duration = 1400;
+    var startTime = null;
+
+    function step(timestamp) {
+      if (startTime === null) startTime = timestamp;
+      var progress = Math.min((timestamp - startTime) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(eased * target) + suffix;
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
     }
-    .gallery-container {
-        grid-template-columns: 1fr;
+
+    window.requestAnimationFrame(step);
+  }
+
+  if (statNumbers.length) {
+    var statsObserver = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          animateCount(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    statNumbers.forEach(function (el) { statsObserver.observe(el); });
+  }
+
+  /* ---------------------------------------------------------
+     Testimonial carousel
+  --------------------------------------------------------- */
+  var carousel = document.getElementById('testimonial-carousel');
+
+  if (carousel) {
+    var track = document.getElementById('carousel-track');
+    var slides = track.children;
+    var dotsWrap = document.getElementById('carousel-dots');
+    var prevBtn = carousel.querySelector('.carousel-prev');
+    var nextBtn = carousel.querySelector('.carousel-next');
+    var current = 0;
+    var autoplayTimer = null;
+    var autoplayDelay = 6000;
+
+    for (var i = 0; i < slides.length; i++) {
+      var dot = document.createElement('button');
+      dot.type = 'button';
+      dot.setAttribute('role', 'tab');
+      dot.setAttribute('aria-label', 'Go to testimonial ' + (i + 1));
+      (function (index) {
+        dot.addEventListener('click', function () { goTo(index); restartAutoplay(); });
+      })(i);
+      dotsWrap.appendChild(dot);
     }
-    .main-image {
-        height: 300px;
+
+    var dots = dotsWrap.children;
+
+    function render() {
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      for (var d = 0; d < dots.length; d++) {
+        dots[d].classList.toggle('is-active', d === current);
+      }
     }
-    .side-images {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 120px;
+
+    function goTo(index) {
+      current = (index + slides.length) % slides.length;
+      render();
     }
-    .footer-container {
-        flex-direction: column;
+
+    function next() { goTo(current + 1); }
+    function prev() { goTo(current - 1); }
+
+    function startAutoplay() {
+      if (prefersReducedMotion) return;
+      stopAutoplay();
+      autoplayTimer = window.setInterval(next, autoplayDelay);
     }
-}
+
+    function stopAutoplay() {
+      if (autoplayTimer) {
+        window.clearInterval(autoplayTimer);
+        autoplayTimer = null;
+      }
+    }
+
+    function restartAutoplay() {
+      stopAutoplay();
+      startAutoplay();
+    }
+
+    nextBtn.addEventListener('click', function () { next(); restartAutoplay(); });
+    prevBtn.addEventListener('click', function () { prev(); restartAutoplay(); });
+
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
+    carousel.addEventListener('focusin', stopAutoplay);
+    carousel.addEventListener('focusout', startAutoplay);
+
+    var touchStartX = 0;
+    var touchDeltaX = 0;
+
+    carousel.addEventListener('touchstart', function (e) {
+      touchStartX = e.touches[0].clientX;
+      touchDeltaX = 0;
+      stopAutoplay();
+    }, { passive: true });
+
+    carousel.addEventListener('touchmove', function (e) {
+      touchDeltaX = e.touches[0].clientX - touchStartX;
+    }, { passive: true });
+
+    carousel.addEventListener('touchend', function () {
+      if (touchDeltaX > 40) {
+        prev();
+      } else if (touchDeltaX < -40) {
+        next();
+      }
+      startAutoplay();
+    });
+
+    render();
+    startAutoplay();
+  }
+
+  /* ---------------------------------------------------------
+     Contact form -> validate, then open WhatsApp with message
+  --------------------------------------------------------- */
+  var form = document.getElementById('contact-form');
+
+  if (form) {
+    var fields = ['name', 'email', 'phone', 'interest', 'message'];
+
+    function showError(field, message) {
+      var group = document.getElementById('cf-' + field).closest('.form-group');
+      var errorEl = document.getElementById('cf-' + field + '-error');
+      if (message) {
+        group.classList.add('has-error');
+        errorEl.textContent = message;
+      } else {
+        group.classList.remove('has-error');
+        errorEl.textContent = '';
+      }
+    }
+
+    function validate() {
+      var valid = true;
+      var values = {};
+
+      fields.forEach(function (field) {
+        var el = document.getElementById('cf-' + field);
+        values[field] = el.value.trim();
+
+        if (!values[field]) {
+          showError(field, 'This field is required.');
+          valid = false;
+        } else if (field === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values[field])) {
+          showError(field, 'Enter a valid email address.');
+          valid = false;
+        } else if (field === 'phone' && !/^[0-9+()\-\s]{7,}$/.test(values[field])) {
+          showError(field, 'Enter a valid phone number.');
+          valid = false;
+        } else {
+          showError(field, '');
+        }
+      });
+
+      return valid ? values : null;
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var values = validate();
+      if (!values) return;
+
+      var message = 'Hello Micakins Wisdom, I would like to get in touch.%0A%0A' +
+        'Name: ' + encodeURIComponent(values.name) + '%0A' +
+        'Email: ' + encodeURIComponent(values.email) + '%0A' +
+        'Phone: ' + encodeURIComponent(values.phone) + '%0A' +
+        'Interested in: ' + encodeURIComponent(values.interest) + '%0A' +
+        'Message: ' + encodeURIComponent(values.message);
+
+      window.open('https://wa.me/2348060747176?text=' + message, '_blank', 'noopener,noreferrer');
+      form.reset();
+    });
+  }
+})();

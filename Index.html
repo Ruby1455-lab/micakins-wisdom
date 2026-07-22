@@ -1,354 +1,562 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <h1>MICAKINS WISDOM <span class="sub-brand">REAL ESTATE VENTURES</span></h1>
-   <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts for premium typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons for WhatsApp and Contact symbols -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Micakins Wisdom Real Estate Ventures | Premium Property Advisory Across Nigeria</title>
+<meta name="description" content="Micakins Wisdom Real Estate Ventures — premium estate consulting, property sales, facility management and building materials supply, trusted by local and diaspora clients across Nigeria.">
+
+<!-- Theme is applied before first paint to avoid a flash of the wrong color scheme -->
+<script>
+  (function () {
+    var saved = localStorage.getItem('mw-theme');
+    var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
+
+<link rel="stylesheet" href="style.css">
+<!-- Google Fonts for premium editorial typography -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Header / Navigation -->
-    <header>
-        <div class="logo">MICAKINS WISDOM</div>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#gallery">Properties</a>
-            <a href="#contact" class="btn-contact">Contact Us</a>
-        </nav>
-    </header>
-  <!-- Displaying the Flyer Image -->
-<div class="flyer-container">
-    <img src="Https://i.postimg.cc/XYwCdhWg/IMG-0405.png" alt="Micakins Wisdom Flyer" class="business-flyer">
-</div>
+<a class="skip-link" href="#main">Skip to content</a>
 
+<!-- ============ HEADER / NAVIGATION ============ -->
+<header id="site-header" class="site-header">
+  <div class="nav-wrap">
+    <a href="#home" class="logo">MICAKINS <span>WISDOM</span></a>
 
-    <!-- Hero  */
-.hero {
-    position: relative;
-    height: 85vh;
-    background-color: #
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
+    <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#properties">Properties</a>
+      <a href="#about">About</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
 
-.hero-overlay {
-    /* We can turn off the dark background overlay now */
-    display: none; 
-}
+    <div class="nav-actions">
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+        <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+        <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"></path></svg>
+      </button>
 
-.hero-content {
-    position: relative;
-    z-index: 1;
-    color: #1a222d; /* Changes main text color to dark navy for contrast */
-    padding: 0 20px;
-}
-
-.hero-content h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3.5rem;
-    line-height: 1.2;
-    margin-bottom: 15px;
-    letter-spacing: 2px;
-    color: #1a222d;
-}
-
-.hero-content h1 span {
-    color: #d4af37; /* Keeps the gold accent for the business type */
-    font-size: 2.2rem;
-    display: block;
-    margin-top: 5px;
-}
-
-.hero-content .tagline {
-    font-size: 1.2rem;
-    font-weight: 400; /* Made slightly heavier for reading on white background */
-    margin-bottom: 30px;
-    letter-spacing: 1px;
-    color: #555555; /* Muted dark gray for the subtitle text */
-}
-
-
-    <!-- Services Section -->
-    <section id="services" class="services-section">
-        <h2>Our Core Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>Estate Consultant</h3>
-                <p>Expert guidance and strategic advice for buying, selling, and investing in Nigerian real estate.</p>
-            </div>
-            <div class="service-card">
-                <h3>Commission Agency</h3>
-                <p>Seamless property matchmaking, bridging the gap between buyers, sellers, landlords, and tenants.</p>
-            </div>
-            <div class="service-card">
-                <h3>Facility Management</h3>
-                <p>Professional oversight, maintenance, and optimization of residential and commercial properties.</p>
-            </div>
-            <div class="service-card">
-                <h3>General Merchandise</h3>
-                <p>Reliable procurement and trading services tailored to meet diverse enterprise and consumer needs.</p>
-            </div>
-            <div class="service-card">
-                <h3>Sales & Supply of Building Materials</h3>
-                <p>Premium quality construction and building materials delivered directly to your project site.</p>
-            </div>
-        </div>
-    </section>
-  <!-- Featured Portfolio Section -->
-<section id="portfolio">
-    <div class="portfolio-container">
-        <h2>Featured Properties</h2>
-        <p class="portfolio-subtitle">A glimpse into our premium real estate listings and managed facilities</p>
-        
-        <div class="portfolio-grid">
-            <!-- Property 1 (Your Flyer Card) -->
-            <div class="portfolio-item">
-                <img src="https://i.postimg.cc/XYwCdhWg/IMG-0405.png" alt="Micakins Wisdom Ventures Flyer">
-                <div class="portfolio-overlay-text">
-                    <h3>Corporate Showcase</h3>
-                    <p>Our Core Values & Services</p>
-                </div>
-            </div>
-
-            <!-- Property 2 (Placeholder - Swap link inside src="" later) -->
-            <div class="portfolio-item">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Luxury Modern Villa">
-                <div class="portfolio-overlay-text">
-                    <h3>Premium Residential</h3>
-                    <p>Estate Consulting & Sales</p>
-                </div>
-            </div>
-
-            <!-- Property 3 (Placeholder - Swap link inside src="" later) -->
-            <div class="portfolio-item">
-                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Modern Interior Kitchen">
-                <div class="portfolio-overlay-text">
-                    <h3>Luxury Interior</h3>
-                    <p>Facility Management</p>
-                </div>
-            </div>
-
-            <!-- Property 4 (Placeholder - Swap link inside src="" later) -->
-            <div class="portfolio-item">
-                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Gated Community">
-                <div class="portfolio-overlay-text">
-                    <h3>Gated Communities</h3>
-                    <p>Prime Plots & Lands</p>
-                </div>
-            </div>
-        </div>
+      <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-</section>
+  </div>
 
-<!-- Main Website Footer -->
-<footer class="main-footer">
-    <div class="footer-container">
-        <div class="footer-brand">
-            <h3>MICAKINS WISDOM</h3>
-            <p class="footer-tagline">REAL ESTATE VENTURES</p>
-            <p class="footer-desc">Your trusted partner in premium property acquisition, facility management, and investment lands across Nigeria.</p>
-        </div>
-        
-        <div class="footer-links">
-            <h4>Quick Navigation</h4>
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Featured Properties</a></li>
-            </ul>
-        </div>
+  <!-- Mobile drawer -->
+  <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+    <nav aria-label="Mobile">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#properties">Properties</a>
+      <a href="#about">About</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
 
-        <!-- NEW: Contact Info Column -->
-        <div class="footer-contact">
-            <h4>Contact Details</h4>
-            <p><span class="contact-label">Call Us:</span> +234 806 074 7176,+234 809 964 9267,+234 817 856 0862.</p>
-            <p><span class="contact-label">Email:</span> michealabidemi04@gmail.com</p>
-            <p><span class="contact-label">Office:</span> Lagos, Nigeria</p>
-        </div>
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section id="home" class="hero">
+    <div class="hero-media">
+      <img src="https://images.unsplash.com/photo-1618828665011-0abd973f7bb8?auto=format&fit=crop&w=1920&q=80" alt="Aerial view of a premium Lagos property district at daytime" fetchpriority="high">
+      <div class="hero-scrim"></div>
     </div>
-    
-     
-  
-            <!-- Right: Functional Contact Form -->
-            <div class="footer-form">
-                <h4>Send Us a Message</h4>
-                <!-- Formspree handles the form submission to your email automatically without backend code -->
-                <form action="https://formspree.io/f/xoqzepao" method="POST">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Full Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="_replyto" placeholder="Your Email Address" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" name="phone" placeholder="Your Phone Number">
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" rows="4" placeholder="How can we help you?" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
-            </div>
-        </div>
-        <div class="footer-bottom"></p>
-        </div>
-    </footer>
-
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/2348060747176?text=Hello%20Micakins%20Wisdom%20Real%20Estate%20Ventures,%20I%20am%20interested%20in%20your%20services." 
-       class="whatsapp-float" 
-       target="_blank" 
-       rel="noopener noreferrer"
-       title="Chat with us on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Micakins Wisdom Real Estate Ventures</p>
+      <h1>Premium Property.<br>Trusted Advisory.<br><span>Across Nigeria.</span></h1>
+      <p class="hero-sub">From Lekki to Guzape, we guide local and diaspora clients through every stage of buying, selling, and managing real estate — with discretion, diligence, and decades of combined experience.</p>
+      <div class="hero-actions">
+        <a href="#properties" class="btn btn-primary">Explore Properties</a>
+        <a href="#contact" class="btn btn-outline" data-focus-form="true">Book a Consultation</a>
+      </div>
+    </div>
+    <a href="#services" class="scroll-cue" aria-label="Scroll to next section">
+      <span></span>
     </a>
+  </section>
 
+  <!-- ============ SERVICES ============ -->
+  <section id="services" class="services-section">
+    <div class="section-inner services-layout">
+      <div class="services-intro">
+        <p class="eyebrow">What We Do</p>
+        <h2>An advisory-first approach to Nigerian real estate</h2>
+        <p>Micakins Wisdom was built on a simple premise: property decisions in Nigeria carry more risk and more opportunity than almost anywhere else, and clients deserve advisors who treat every transaction with the same rigor whether it's a single plot or a portfolio. We pair on-the-ground diligence with the responsiveness diaspora clients need.</p>
+        <p>Every engagement starts with listening — to your budget, your timeline, and what "home" or "investment" actually means to you — before we ever show a property.</p>
+      </div>
+
+      <div class="services-list">
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v2h18V7l-9-5z"></path><path d="M5 10v9M9 10v9M15 10v9M19 10v9"></path><path d="M3 21h18"></path></svg>
+          </span>
+          <h3>Estate Consultant</h3>
+          <p>Expert guidance and strategic advice for buying, selling, and investing in Nigerian real estate, tailored to your goals and risk appetite.</p>
+          <a href="#contact" class="learn-more">Learn more <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="4"></circle><circle cx="17" cy="15" r="4"></circle><path d="M11 10.5 14 12.5"></path></svg>
+          </span>
+          <h3>Commission Agency</h3>
+          <p>Seamless property matchmaking that bridges the gap between buyers, sellers, landlords, and tenants, with every party's interest protected.</p>
+          <a href="#contact" class="learn-more">Learn more <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 1.4 0l1.6-1.6a1 1 0 0 1 1.4 0l2.2 2.2a1 1 0 0 1 0 1.4l-1.6 1.6a1 1 0 0 0 0 1.4l3.4 3.4"></path><path d="m2 22 5.5-1.5L21 7 17 3 3.5 16.5 2 22z"></path></svg>
+          </span>
+          <h3>Facility Management</h3>
+          <p>Professional oversight, maintenance, and optimization of residential and commercial properties so your asset holds its value.</p>
+          <a href="#contact" class="learn-more">Learn more <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="1.5"></rect><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><path d="M3 12h18"></path></svg>
+          </span>
+          <h3>General Merchandise</h3>
+          <p>Reliable procurement and trading services tailored to meet diverse enterprise and consumer needs, sourced and vetted directly.</p>
+          <a href="#contact" class="learn-more">Learn more <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V9l7-5 7 5v12"></path><path d="M9 21v-6h6v6"></path></svg>
+          </span>
+          <h3>Sales &amp; Supply of Building Materials</h3>
+          <p>Premium quality construction and building materials delivered directly to your project site, on schedule and on budget.</p>
+          <a href="#contact" class="learn-more">Learn more <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="about-section">
+    <div class="section-inner about-layout">
+      <div class="about-media">
+        <img src="https://images.unsplash.com/photo-1660742555617-43a113547474?auto=format&fit=crop&w=900&q=80" alt="Portrait of the Micakins Wisdom founder in a dark tailored suit" loading="lazy">
+      </div>
+      <div class="about-content">
+        <p class="eyebrow">Our Story</p>
+        <h2>A decade of building trust, one closing at a time</h2>
+        <p>Micakins Wisdom Real Estate Ventures was founded on the belief that Nigerian real estate deserves the same rigor and transparency clients expect anywhere else in the world. What began as a small consulting practice in Lagos has grown into a full-service advisory covering estate consulting, agency, facility management, and building material supply — serving families relocating home, first-time buyers, and diaspora investors managing property from afar.</p>
+        <p>Every listing we bring to market and every client we advise passes through the same disciplined process: verified documentation, on-site inspection, and honest counsel — even when that means advising against a deal.</p>
+
+        <!-- TODO: add real trust badges (e.g. NIESV, REDAN, professional affiliations) -->
+
+        <div class="stats-row" id="stats-row">
+          <div class="stat">
+            <span class="stat-number" data-count="150" data-suffix="+">0</span>
+            <span class="stat-label">Properties Sold</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-count="300" data-suffix="+">0</span>
+            <span class="stat-label">Clients Served</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-count="10" data-suffix="+">0</span>
+            <span class="stat-label">Years Active</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-count="5" data-suffix="+">0</span>
+            <span class="stat-label">Cities Covered</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROPERTIES ============ -->
+  <section id="properties" class="properties-section">
+    <div class="section-inner">
+      <div class="section-heading">
+        <p class="eyebrow">Current Listings</p>
+        <h2>Featured Properties</h2>
+        <p class="section-lead">A curated selection of premium listings and managed facilities across Nigeria's most sought-after locations.</p>
+      </div>
+
+      <div class="filter-bar" role="group" aria-label="Filter properties">
+        <button type="button" class="filter-btn is-active" data-filter="all">All</button>
+        <button type="button" class="filter-btn" data-filter="for-sale">For Sale</button>
+        <button type="button" class="filter-btn" data-filter="for-rent">For Rent</button>
+        <button type="button" class="filter-btn" data-filter="lagos">Lagos</button>
+        <button type="button" class="filter-btn" data-filter="abuja">Abuja</button>
+        <button type="button" class="filter-btn" data-filter="land">Land</button>
+      </div>
+
+      <div class="properties-grid" id="properties-grid">
+
+        <article class="property-card" data-category="for-sale lagos">
+          <div class="property-media">
+            <span class="badge badge-sale">For Sale</span>
+            <img src="https://images.unsplash.com/photo-1661332618293-6b6204cd87fc?auto=format&fit=crop&w=900&q=80" alt="Four bedroom semi-detached duplex exterior with stone perimeter wall in Lekki Phase 1" loading="lazy">
+          </div>
+          <div class="property-body">
+            <h3>4-Bedroom Semi-Detached Duplex</h3>
+            <p class="property-location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg> Lekki Phase 1, Lagos</p>
+            <p class="property-price">₦185,000,000</p>
+            <ul class="property-specs">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6"></path><path d="M3 18v2M21 18v2M5 10V7a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v3"></path></svg> 4 Beds</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-3z"></path><path d="M6 12V6a2 2 0 0 1 3.5-1.3"></path><path d="M3 19h18"></path></svg> 5 Baths</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3h7v7H3zM14 14h7v7h-7z"></path><path d="M14 3h7v7h-7zM3 14h7v7H3z"></path></svg> 380 sqm</li>
+            </ul>
+            <div class="property-actions">
+              <a href="#contact" class="btn btn-small btn-primary" data-focus-form="true">View Details</a>
+              <a href="https://wa.me/2348060747176?text=Hello%20Micakins%20Wisdom%2C%20I%27m%20interested%20in%20the%204-Bedroom%20Semi-Detached%20Duplex%20in%20Lekki%20Phase%201." class="btn-icon" target="_blank" rel="noopener noreferrer" aria-label="Ask about this property on WhatsApp">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5C10.1 9 9.6 7.8 9.4 7.3c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"></path><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3.1.8.8-3-.2-.3A8 8 0 1 1 20 12a8 8 0 0 1-8 8z"></path></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="property-card" data-category="for-sale lagos land">
+          <div class="property-media">
+            <span class="badge badge-sale">For Sale</span>
+            <img src="https://images.unsplash.com/photo-1639774275491-71d62502a4e0?auto=format&fit=crop&w=900&q=80" alt="Aerial view of a developing gated residential estate with tree-lined roads in Ibeju-Lekki" loading="lazy">
+          </div>
+          <div class="property-body">
+            <h3>Serviced Gated Plots</h3>
+            <p class="property-location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg> Ibeju-Lekki, Lagos</p>
+            <p class="property-price">₦45,000,000 <span>/ plot</span></p>
+            <ul class="property-specs">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3h7v7H3zM14 14h7v7h-7z"></path><path d="M14 3h7v7h-7zM3 14h7v7H3z"></path></svg> 648 sqm</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10l8-6 8 6v10"></path><path d="M9 20v-6h6v6"></path></svg> Gated Estate</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4"></path><circle cx="12" cy="12" r="9"></circle></svg> Titled</li>
+            </ul>
+            <div class="property-actions">
+              <a href="#contact" class="btn btn-small btn-primary" data-focus-form="true">View Details</a>
+              <a href="https://wa.me/2348060747176?text=Hello%20Micakins%20Wisdom%2C%20I%27m%20interested%20in%20the%20Serviced%20Gated%20Plots%20in%20Ibeju-Lekki." class="btn-icon" target="_blank" rel="noopener noreferrer" aria-label="Ask about this property on WhatsApp">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5C10.1 9 9.6 7.8 9.4 7.3c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"></path><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3.1.8.8-3-.2-.3A8 8 0 1 1 20 12a8 8 0 0 1-8 8z"></path></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="property-card" data-category="for-sale abuja">
+          <div class="property-media">
+            <span class="badge badge-sale">For Sale</span>
+            <img src="https://images.unsplash.com/photo-1661332626638-f60fc1e9cc09?auto=format&fit=crop&w=900&q=80" alt="Modern luxury duplex with a private balcony in Guzape, Abuja" loading="lazy">
+          </div>
+          <div class="property-body">
+            <h3>Modern Luxury Duplex</h3>
+            <p class="property-location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg> Guzape, Abuja</p>
+            <p class="property-price">₦320,000,000</p>
+            <ul class="property-specs">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6"></path><path d="M3 18v2M21 18v2M5 10V7a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v3"></path></svg> 5 Beds</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-3z"></path><path d="M6 12V6a2 2 0 0 1 3.5-1.3"></path><path d="M3 19h18"></path></svg> 6 Baths</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3h7v7H3zM14 14h7v7h-7z"></path><path d="M14 3h7v7h-7zM3 14h7v7H3z"></path></svg> 450 sqm</li>
+            </ul>
+            <div class="property-actions">
+              <a href="#contact" class="btn btn-small btn-primary" data-focus-form="true">View Details</a>
+              <a href="https://wa.me/2348060747176?text=Hello%20Micakins%20Wisdom%2C%20I%27m%20interested%20in%20the%20Modern%20Luxury%20Duplex%20in%20Guzape%2C%20Abuja." class="btn-icon" target="_blank" rel="noopener noreferrer" aria-label="Ask about this property on WhatsApp">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5C10.1 9 9.6 7.8 9.4 7.3c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"></path><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3.1.8.8-3-.2-.3A8 8 0 1 1 20 12a8 8 0 0 1-8 8z"></path></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="property-card" data-category="for-rent lagos">
+          <div class="property-media">
+            <span class="badge badge-rent">For Rent</span>
+            <img src="https://images.unsplash.com/photo-1543414347-1c348021f279?auto=format&fit=crop&w=900&q=80" alt="White painted multi-storey commercial building in Victoria Island" loading="lazy">
+          </div>
+          <div class="property-body">
+            <h3>Premium Commercial Space</h3>
+            <p class="property-location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg> Victoria Island, Lagos</p>
+            <p class="property-price">₦25,000,000 <span>/ year</span></p>
+            <ul class="property-specs">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3h7v7H3zM14 14h7v7h-7z"></path><path d="M14 3h7v7h-7zM3 14h7v7H3z"></path></svg> 600 sqm</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21V7l8-4 8 4v14"></path><path d="M9 21v-6h6v6"></path></svg> Open Floor Plate</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4z"></path><path d="M4 9h16M9 4v16"></path></svg> 3 Parking Bays</li>
+            </ul>
+            <div class="property-actions">
+              <a href="#contact" class="btn btn-small btn-primary" data-focus-form="true">View Details</a>
+              <a href="https://wa.me/2348060747176?text=Hello%20Micakins%20Wisdom%2C%20I%27m%20interested%20in%20the%20Premium%20Commercial%20Space%20in%20Victoria%20Island." class="btn-icon" target="_blank" rel="noopener noreferrer" aria-label="Ask about this property on WhatsApp">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5C10.1 9 9.6 7.8 9.4 7.3c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"></path><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3.1.8.8-3-.2-.3A8 8 0 1 1 20 12a8 8 0 0 1-8 8z"></path></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="property-card" data-category="for-rent lagos">
+          <div class="property-media">
+            <span class="badge badge-rent">For Rent</span>
+            <img src="https://images.unsplash.com/photo-1661332628548-082c0b446ee1?auto=format&fit=crop&w=900&q=80" alt="Three bedroom terrace house with a brick perimeter wall in Ikoyi" loading="lazy">
+          </div>
+          <div class="property-body">
+            <h3>3-Bedroom Terrace</h3>
+            <p class="property-location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg> Ikoyi, Lagos</p>
+            <p class="property-price">₦12,000,000 <span>/ year</span></p>
+            <ul class="property-specs">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6"></path><path d="M3 18v2M21 18v2M5 10V7a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v3"></path></svg> 3 Beds</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-3z"></path><path d="M6 12V6a2 2 0 0 1 3.5-1.3"></path><path d="M3 19h18"></path></svg> 4 Baths</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3h7v7H3zM14 14h7v7h-7z"></path><path d="M14 3h7v7h-7zM3 14h7v7H3z"></path></svg> 220 sqm</li>
+            </ul>
+            <div class="property-actions">
+              <a href="#contact" class="btn btn-small btn-primary" data-focus-form="true">View Details</a>
+              <a href="https://wa.me/2348060747176?text=Hello%20Micakins%20Wisdom%2C%20I%27m%20interested%20in%20the%203-Bedroom%20Terrace%20in%20Ikoyi." class="btn-icon" target="_blank" rel="noopener noreferrer" aria-label="Ask about this property on WhatsApp">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5C10.1 9 9.6 7.8 9.4 7.3c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"></path><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3.1.8.8-3-.2-.3A8 8 0 1 1 20 12a8 8 0 0 1-8 8z"></path></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="property-card" data-category="for-sale lagos">
+          <div class="property-media">
+            <span class="badge badge-sale">For Sale</span>
+            <img src="https://images.unsplash.com/photo-1661332624889-2bb66123d1f7?auto=format&fit=crop&w=900&q=80" alt="Block of flats with multiple units and shared compound in Magodo" loading="lazy">
+          </div>
+          <div class="property-body">
+            <h3>Block of Flats (6 Units)</h3>
+            <p class="property-location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg> Magodo, Lagos</p>
+            <p class="property-price">₦210,000,000</p>
+            <ul class="property-specs">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6"></path><path d="M3 18v2M21 18v2M5 10V7a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v3"></path></svg> 12 Beds Total</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-3z"></path><path d="M6 12V6a2 2 0 0 1 3.5-1.3"></path><path d="M3 19h18"></path></svg> 12 Baths</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3h7v7H3zM14 14h7v7h-7z"></path><path d="M14 3h7v7h-7zM3 14h7v7H3z"></path></svg> 900 sqm</li>
+            </ul>
+            <div class="property-actions">
+              <a href="#contact" class="btn btn-small btn-primary" data-focus-form="true">View Details</a>
+              <a href="https://wa.me/2348060747176?text=Hello%20Micakins%20Wisdom%2C%20I%27m%20interested%20in%20the%20Block%20of%20Flats%20in%20Magodo." class="btn-icon" target="_blank" rel="noopener noreferrer" aria-label="Ask about this property on WhatsApp">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5C10.1 9 9.6 7.8 9.4 7.3c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"></path><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3.1.8.8-3-.2-.3A8 8 0 1 1 20 12a8 8 0 0 1-8 8z"></path></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="filter-empty" id="filter-empty" hidden>No properties match this filter yet. Please check back soon or <a href="#contact">contact us</a> for off-market options.</p>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="section-inner">
+      <div class="section-heading">
+        <p class="eyebrow">Client Voices</p>
+        <h2>What Our Clients Say</h2>
+        <p class="section-lead">Trusted locally in Nigeria, preferred globally by our diaspora clients.</p>
+      </div>
+
+      <div class="carousel" id="testimonial-carousel" aria-roledescription="carousel" aria-label="Client testimonials">
+        <div class="carousel-viewport">
+          <ul class="carousel-track" id="carousel-track">
+
+            <li class="testimonial-card" role="group" aria-roledescription="slide" aria-label="Testimonial 1 of 5">
+              <p class="testimonial-quote">"Micakins Wisdom helped me secure two prime plots of land in Lagos with zero stress. Their facility management team is top-notch and highly reliable."</p>
+              <div class="testimonial-author">
+                <span class="avatar" style="--avatar-bg: var(--accent);">AB</span>
+                <div>
+                  <span class="author-name">Alhaji Amusa B. <span class="verified-badge">Verified Client</span></span>
+                  <span class="author-city">Lagos, Nigeria</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="testimonial-card" role="group" aria-roledescription="slide" aria-label="Testimonial 2 of 5">
+              <p class="testimonial-quote">"As a diaspora investor, trust is everything. They handled my building material supplies and estate consulting flawlessly from thousands of miles away."</p>
+              <div class="testimonial-author">
+                <span class="avatar">EK</span>
+                <div>
+                  <span class="author-name">Dr. Evans K. <span class="verified-badge">Verified Client</span></span>
+                  <span class="author-city">London, United Kingdom</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="testimonial-card" role="group" aria-roledescription="slide" aria-label="Testimonial 3 of 5">
+              <p class="testimonial-quote">"I inherited a family property in Magodo I couldn't manage from Abuja. Micakins Wisdom now handles tenants, maintenance and rent collection — I just get a report every month."</p>
+              <div class="testimonial-author">
+                <span class="avatar">FO</span>
+                <div>
+                  <span class="author-name">Mrs. Folasade O. <span class="verified-badge">Verified Client</span></span>
+                  <span class="author-city">Abuja, Nigeria</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="testimonial-card" role="group" aria-roledescription="slide" aria-label="Testimonial 4 of 5">
+              <p class="testimonial-quote">"I bought my first terrace house through them while still based in Houston. Every document was verified before I wired a single dollar. That diligence is rare."</p>
+              <div class="testimonial-author">
+                <span class="avatar">CN</span>
+                <div>
+                  <span class="author-name">Engr. Chidi N. <span class="verified-badge">Verified Client</span></span>
+                  <span class="author-city">Houston, United States</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="testimonial-card" role="group" aria-roledescription="slide" aria-label="Testimonial 5 of 5">
+              <p class="testimonial-quote">"Their team sourced building materials for our estate development at better rates than we were getting directly from suppliers, and delivery was always on schedule."</p>
+              <div class="testimonial-author">
+                <span class="avatar">NA</span>
+                <div>
+                  <span class="author-name">Mrs. Ngozi A. <span class="verified-badge">Verified Client</span></span>
+                  <span class="author-city">Lekki, Lagos</span>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+        <button type="button" class="carousel-arrow carousel-prev" aria-label="Previous testimonial">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"></path></svg>
+        </button>
+        <button type="button" class="carousel-arrow carousel-next" aria-label="Next testimonial">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"></path></svg>
+        </button>
+
+        <div class="carousel-dots" id="carousel-dots" role="tablist" aria-label="Choose testimonial"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="contact-section">
+    <div class="section-inner contact-layout">
+      <div class="contact-info">
+        <p class="eyebrow">Get In Touch</p>
+        <h2>Let's talk about your next property move</h2>
+        <p class="section-lead">Reach us directly, or send a message and we'll respond within one business day.</p>
+
+        <div class="contact-block">
+          <h3>Office</h3>
+          <p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg> Lagos, Nigeria</p>
+        </div>
+
+        <div class="contact-block">
+          <h3>Phone</h3>
+          <a href="tel:+2348060747176"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 2.9a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.5 2.9.6a2 2 0 0 1 1.8 2.1z"></path></svg> +234 806 074 7176</a>
+          <a href="tel:+2348099649267"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 2.9a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.5 2.9.6a2 2 0 0 1 1.8 2.1z"></path></svg> +234 809 964 9267</a>
+          <a href="tel:+2348178560862"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 2.9a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.5 2.9.6a2 2 0 0 1 1.8 2.1z"></path></svg> +234 817 856 0862</a>
+        </div>
+
+        <div class="contact-block">
+          <h3>Email</h3>
+          <a href="mailto:michealabidemi04@gmail.com"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 6-10 7L2 6"></path></svg> michealabidemi04@gmail.com</a>
+        </div>
+
+        <div class="contact-block">
+          <h3>Follow Us</h3>
+          <div class="social-row">
+            <a href="#" aria-label="Micakins Wisdom on Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4.5"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a>
+            <a href="#" aria-label="Micakins Wisdom on Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3.5l.5-4H14V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+            <a href="#" aria-label="Micakins Wisdom on X"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4l16 16M20 4 4 20"></path></svg></a>
+            <a href="#" aria-label="Micakins Wisdom on LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="3"></rect><path d="M7 10v7M7 7v.01M11 17v-4.5a2.5 2.5 0 0 1 5 0V17M11 10v7"></path></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contact-form" novalidate>
+        <h3>Send Us a Message</h3>
+
+        <div class="form-group">
+          <label for="cf-name">Full Name</label>
+          <input type="text" id="cf-name" name="name" required autocomplete="name">
+          <span class="form-error" id="cf-name-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="cf-email">Email Address</label>
+          <input type="email" id="cf-email" name="email" required autocomplete="email">
+          <span class="form-error" id="cf-email-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="cf-phone">Phone Number</label>
+          <input type="tel" id="cf-phone" name="phone" required autocomplete="tel">
+          <span class="form-error" id="cf-phone-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="cf-interest">I'm interested in</label>
+          <select id="cf-interest" name="interest" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="Buy Property">Buy Property</option>
+            <option value="Sell Property">Sell Property</option>
+            <option value="Rent">Rent</option>
+            <option value="Facility Management">Facility Management</option>
+            <option value="Consultation">Consultation</option>
+            <option value="Other">Other</option>
+          </select>
+          <span class="form-error" id="cf-interest-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="4" required></textarea>
+          <span class="form-error" id="cf-message-error"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary submit-btn">
+          <span class="submit-label">Send via WhatsApp</span>
+        </button>
+        <p class="form-hint">Submitting opens WhatsApp with your details pre-filled so we can respond quickly.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="section-inner footer-grid">
+    <div class="footer-brand">
+      <p class="logo">MICAKINS <span>WISDOM</span></p>
+      <p class="footer-tagline">Real Estate Ventures</p>
+      <p class="footer-desc">Your trusted partner in premium property acquisition, facility management, and investment lands across Nigeria.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Navigation</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#properties">Properties</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p><a href="tel:+2348060747176">+234 806 074 7176</a></p>
+      <p><a href="mailto:michealabidemi04@gmail.com">michealabidemi04@gmail.com</a></p>
+      <p>Lagos, Nigeria</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Micakins Wisdom Real Estate Ventures. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/2348060747176?text=Hello%20Micakins%20Wisdom%20Real%20Estate%20Ventures%2C%20I%20am%20interested%20in%20your%20services."
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Chat with Micakins Wisdom on WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5C10.1 9 9.6 7.8 9.4 7.3c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"></path><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3.1.8.8-3-.2-.3A8 8 0 1 1 20 12a8 8 0 0 1-8 8z"></path></svg>
+</a>
+
+<script src="script.js"></script>
 </body>
 </html>
-
-
-    <!-- Interactive Scripts -->
-    <script>
-        // 1. Smooth Interactivity for the Contact Form
-        const form = document.querySelector('.footer-form form');
-        
-        if (form) {
-            form.addEventListener('submit', function(e) {
-                // This lets the form submit to Formspree naturally, 
-                // but we can add a slight loading state to the button so the user knows it's working
-                const submitBtn = document.querySelector('.submit-btn');
-                submitBtn.innerText = 'Sending...';
-                submitBtn.style.opacity = '0.7';
-                submitBtn.disabled = true;
-            });
-        }
-
-        // 2. Dynamic Header Scroll Effect
-        // Adds a subtle shadow to the top navigation bar once you start scrolling down the page
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
-                header.style.transition = 'box-shadow 0.3s ease';
-            } else {
-                header.style.boxShadow = 'none';
-            }
-        });
-    </script>
-
-<!-- Reviews / Testimonials Section -->
-<section id="reviews">
-    <div class="reviews-container">
-        <h2>What Our Clients Say</h2>
-        <p class="reviews-subtitle">Trusted locally in Nigeria, preferred globally.</p>
-        
-        <div class="reviews-grid">
-            <!-- Nigerian Review -->
-            <div class="review-card">
-                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                <p class="review-text">"Micakins Wisdom helped me secure two prime plots of land in Lagos with zero stress. Their facility management team is top-notch and highly reliable."</p>
-                <div class="client-info">
-                    <span class="client-name">Alhaji Amusa B.</span>
-                    <span class="client-location">Lagos, Nigeria</span>
-                </div>
-            </div>
-
-            <!-- Foreign Review -->
-            <div class="review-card">
-                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                <p class="review-text">"As a diaspora investor, trust is everything. They handled my building material supplies and estate consulting flawlessly from thousands of miles away."</p>
-                <div class="client-info">
-                    <span class="client-name">Dr. Evans K.</span>
-                    <span class="client-location">London, UK</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Featured Portfolio Section -->
-<section id="portfolio">
-    <div class="portfolio-container">
-        <h2>Featured Properties</h2>
-        <p class="portfolio-subtitle">Premium listings across prime locations in Nigeria</p>
-        
-        <div class="portfolio-grid">
-            <!-- Property 1: Your Business Flyer -->
-            <div class="portfolio-item">
-                <img src="https://i.postimg.cc/XYwCdhWg/IMG-0405.png" alt="Micakins Wisdom Ventures Flyer">
-                <div class="portfolio-overlay-text">
-                    <h3>Corporate Showcase</h3>
-                    <p>Our Core Services</p>
-                </div>
-            </div>
-
-            <!-- Property 2 -->
-            <div class="portfolio-item">
-                <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=800&q=80" alt="Premium Property">
-                <div class="portfolio-overlay-text">
-                    <h3>4-Bedroom Semi-Detached</h3>
-                    <p>Lekki Phase 1, Lagos</p>
-                </div>
-            </div>
-
-            <!-- Property 3 -->
-            <div class="portfolio-item">
-                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="Serviced Plots">
-                <div class="portfolio-overlay-text">
-                    <h3>Serviced Gated Plots</h3>
-                    <p>Ibeju-Lekki, Lagos</p>
-                </div>
-            </div>
-
-            <!-- Property 4 -->
-            <div class="portfolio-item">
-                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Luxury Apartment">
-                <div class="portfolio-overlay-text">
-                    <h3>Modern Luxury Duplex</h3>
-                    <p>Guzape, Abuja</p>
-                </div>
-            </div>
-
-            <!-- NEW Property 5: Commercial Space / Office Listing -->
-            <div class="portfolio-item">
-                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Commercial Property">
-                <div class="portfolio-overlay-text">
-                    <h3>Premium Commercial Space</h3>
-                    <p>Victoria Island, Lagos</p>
-                </div>
-            </div>
-
-<!-- Main Website Footer -->
-<footer class="main-footer">
-    <div class="footer-container">
-        <div class="footer-brand">
-            <h3>MICAKINS WISDOM</h3>
-            <p class="footer-tagline">REAL ESTATE VENTURES</p>
-            <p class="footer-desc">Your trusted partner in premium property acquisition, facility management, and investment lands across Nigeria.</p>
-        </div>
-        
-        <div class="footer-links">
-            <h4>Quick Navigation</h4>
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Featured Properties</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-        </div>
-    </div>
-    
-    <div class="footer-bottom">
-        <p>&copy; 2026 Micakins Wisdom Real Estate Ventures. All Rights Reserved.</p>
-    </div>
-</footer>
-            
-
