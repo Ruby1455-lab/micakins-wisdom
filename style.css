@@ -1,5 +1,5 @@
 /* ==========================================================
-   MICAKINS WISDOM — DESIGN SYSTEM
+  MICAKINS WISDOM — DESIGN SYSTEM
    ========================================================== */
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -218,7 +218,7 @@ h1, h2, h3, h4 {
 }
 
 /* ==========================================================
-   HEADER / NAVIGATION
+  HEADER / NAVIGATION
    ========================================================== */
 .site-header {
   position: sticky;
@@ -1282,3 +1282,4 @@ h1, h2, h3, h4 {
   .hero-actions .btn { width: 100%; }
   .properties-grid { grid-template-columns: 1fr; }
 }
+
